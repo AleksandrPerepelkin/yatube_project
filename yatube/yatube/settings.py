@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'posts.apps.IceCreamConfig', # Это платформа для публикаций, блога.
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
