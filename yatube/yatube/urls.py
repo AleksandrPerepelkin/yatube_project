@@ -17,13 +17,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    # Дорогой Джанго, если на сервер пришёл любой запрос (''),
-    # перейди в файл urls приложения ice_cream 
-    # и проверь там все path() на совпадение с запрошенным URL
-    path('', include('posts.urls')),
-    # Если в приложении posts не найдётся совпадений -
-    # Django продолжит искать совпадения здесь, в головном файле urls.py.
-
-    # Встроенная админка Django подключена «из коробки» по адресу admin/
+    path('', include('posts.urls', namespace='posts')),
     path('admin/', admin.site.urls), 
 ]
